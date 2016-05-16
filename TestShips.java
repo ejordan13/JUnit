@@ -1,13 +1,16 @@
-// Source:  http://www.tutorialspoint.com/junit/index.htm
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
+/**
+    TestShips class creates a JUnit test for the Ship, CruiseShip
+    and CargoShip classes
+ */
 public class TestShips {
 	CargoShip cargo = new CargoShip("Cargo", "2011", 500);
 	CruiseShip cruise = new CruiseShip("Cruise", "2012", 1200);
 	Ship ship = new Ship("Ship", "2013");
 
-	//test to check name
+	//test to verify getName methods
 	@Test
 	public void testGetName()
 	{
@@ -21,7 +24,7 @@ public class TestShips {
 		assertEquals("Ship", name);
 	}
 
-	// test to check year built
+	// test to verify yearBuilt methods
 	@Test
 	public void testYearBuilt()
 	{
@@ -35,7 +38,7 @@ public class TestShips {
 		assertEquals("2013", yearBuilt);
 	}
 	
-	// test to check tonnage
+	// test to verify getTonnage method
 	@Test
 	public void testGetTonnage()
 	{
@@ -43,7 +46,7 @@ public class TestShips {
 		assertEquals(Integer.toString(tons), "500");
 	}
 	
-	// test to check passengers
+	// test to verify getPassengers method
 	@Test
 	public void testGetPassengers()
 	{
@@ -51,7 +54,7 @@ public class TestShips {
 		assertEquals(Integer.toString(passengers), "1200");
 	}
 	
-	// test to check toString methods
+	// test to verify toString methods
 	@Test
 	public void testToString()
 	{
